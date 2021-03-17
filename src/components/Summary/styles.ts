@@ -5,30 +5,34 @@ export const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: -10rem;
+`;
 
-  div {
-    background: var(--shape);
-    padding: 1.5rem 2rem;
-    border-radius: 0.25rem;
-    color: var(--text-title);
+interface SummaryCardProps {
+  negativeAmount?: boolean;
+}
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+export const SummaryCard = styled.div<SummaryCardProps>`
+  background: var(--shape);
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  color: ${props => props.negativeAmount ? 'var(--red)' : 'var(--text-title)'};
 
-    strong {
-      display: block;
-      margin-top: 1rem;
-      font-size: 2rem;
-      font-weight: 500;
-      line-height: 3rem;
-    }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    &.highlight-background {
-      background: var(--green);
-      color: #fff;
-    }
+  strong {
+    display: block;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+
+  &.highlight-background {
+    background: var(--green);
+    color: #fff;
   }
 `;
