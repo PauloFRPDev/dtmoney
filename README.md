@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Watch Me
+  DT Money
 </h3>
 
 <p align="center">
